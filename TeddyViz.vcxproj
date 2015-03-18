@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{4A758BBB-914C-452A-BCFB-B06F18927DE4}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>TeddyVolViz</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName)</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName)</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;.;$(OIVHOME)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;DEBUG;_DEBUG;_LARGEFILE_SOURCE;_FILE_OFFSET_BITS=64;_BIND_TO_CURRENT_VCLIBS_VERSION=1;_BIND_TO_CURRENT_CRT_VERSION=1;_BIND_TO_CURRENT_ATL_VERSION=1;_BIND_TO_CURRENT_MFC_VERSION=1;_BIND_TO_CURRENT_OPENMP_VERSION=1;WIN64;_CRT_SECURE_NO_DEPRECATE;SO_OIVARCH="arch-Windows-x86_64-msvc11";OIV_ENABLE_DIRECTVIZ;OIV_ENABLE_CUDA;OIV_ENABLE_CUDA_ALGORITHMS;OIV_ENABLE_OPENCL;OIV_ENABLE_OPENCL_ALGORITHMS;OIV_ENABLE_WX;OIV_ENABLE_MESHIVIZ;OIVIO_ENABLE_STL;OIVIO_ENABLE_CAD;OIVIO_ENABLE_DXF;OIVIO_ENABLE_FLT;QT_DLL;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;DEBUG;_DEBUG;_LARGEFILE_SOURCE;_FILE_OFFSET_BITS=64;_BIND_TO_CURRENT_VCLIBS_VERSION=1;_BIND_TO_CURRENT_CRT_VERSION=1;_BIND_TO_CURRENT_ATL_VERSION=1;_BIND_TO_CURRENT_MFC_VERSION=1;_BIND_TO_CURRENT_OPENMP_VERSION=1;WIN64;_CRT_SECURE_NO_DEPRECATE;SO_OIVARCH=\"arch-Windows-x86_64-msvc11\";OIV_ENABLE_DIRECTVIZ;OIV_ENABLE_CUDA;OIV_ENABLE_CUDA_ALGORITHMS;OIV_ENABLE_OPENCL;OIV_ENABLE_OPENCL_ALGORITHMS;OIV_ENABLE_WX;OIV_ENABLE_MESHIVIZ;OIVIO_ENABLE_STL;OIVIO_ENABLE_CAD;OIVIO_ENABLE_DXF;OIVIO_ENABLE_FLT;QT_DLL;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;.;$(OIVHOME)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.;.;$(OIVHOME)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug /SUBSYSTEM:CONSOLE,5.02 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;LDMD.lib;VolumeVizD.lib;InventorD.lib;InventorGuiD.lib;InventorBaseD.lib;ScaleVizD.lib;InventorWinD.lib;InventorWinD.lib;DialogVizWinD.lib;DialogVizWinD.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OIVHOME)/arch-windows-x86_64-msvc11-$(Configuration)/lib;$(OIVHOME)/arch-windows-x86_64-msvc11-$(Configuration)/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>$(OIVHOME)/arch-windows-x86_64-msvc11-$(Configuration)/Demos/VolumeViz/simpleVolume.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OIVHOME)/arch-windows-x86_64-msvc11-$(Configuration)/Demos/VolumeViz/simpleVolume.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;.;$(OIVHOME)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_SECURE_SCL=0;NDEBUG;OIV_ENABLE_OPENMP;_LARGEFILE_SOURCE;_FILE_OFFSET_BITS=64;_BIND_TO_CURRENT_VCLIBS_VERSION=1;_BIND_TO_CURRENT_CRT_VERSION=1;_BIND_TO_CURRENT_ATL_VERSION=1;_BIND_TO_CURRENT_MFC_VERSION=1;_BIND_TO_CURRENT_OPENMP_VERSION=1;WIN64;_CRT_SECURE_NO_DEPRECATE;SO_OIVARCH="arch-Windows-x86_64-msvc11";OIV_ENABLE_DIRECTVIZ;OIV_ENABLE_CUDA;OIV_ENABLE_CUDA_ALGORITHMS;OIV_ENABLE_OPENCL;OIV_ENABLE_OPENCL_ALGORITHMS;OIV_ENABLE_WX;OIV_ENABLE_MESHIVIZ;OIVIO_ENABLE_STL;OIVIO_ENABLE_CAD;OIVIO_ENABLE_DXF;OIVIO_ENABLE_FLT;QT_DLL;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_SECURE_SCL=0;NDEBUG;OIV_ENABLE_OPENMP;_LARGEFILE_SOURCE;_FILE_OFFSET_BITS=64;_BIND_TO_CURRENT_VCLIBS_VERSION=1;_BIND_TO_CURRENT_CRT_VERSION=1;_BIND_TO_CURRENT_ATL_VERSION=1;_BIND_TO_CURRENT_MFC_VERSION=1;_BIND_TO_CURRENT_OPENMP_VERSION=1;WIN64;_CRT_SECURE_NO_DEPRECATE;SO_OIVARCH=\"arch-Windows-x86_64-msvc11\";OIV_ENABLE_DIRECTVIZ;OIV_ENABLE_CUDA;OIV_ENABLE_CUDA_ALGORITHMS;OIV_ENABLE_OPENCL;OIV_ENABLE_OPENCL_ALGORITHMS;OIV_ENABLE_WX;OIV_ENABLE_MESHIVIZ;OIVIO_ENABLE_STL;OIVIO_ENABLE_CAD;OIVIO_ENABLE_DXF;OIVIO_ENABLE_FLT;QT_DLL;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;.;$(OIVHOME)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>.;.;$(OIVHOME)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 /SUBSYSTEM:CONSOLE,5.02 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;LDM.lib;VolumeViz.lib;Inventor.lib;InventorGui.lib;InventorBase.lib;ScaleViz.lib;InventorWin.lib;InventorWin.lib;DialogVizWin.lib;DialogVizWin.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OIVHOME)/arch-windows-x86_64-msvc11-$(Configuration)/lib;$(OIVHOME)/arch-windows-x86_64-msvc11-$(Configuration)/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>$(OIVHOME)/arch-windows-x86_64-msvc11-$(Configuration)/Demos/VolumeViz/simpleVolume.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OIVHOME)/arch-windows-x86_64-msvc11-$(Configuration)/Demos/VolumeViz/simpleVolume.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="teddyVolViz.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
