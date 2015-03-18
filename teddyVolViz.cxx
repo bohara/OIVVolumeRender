@@ -38,7 +38,7 @@ Project: Volume Rendering in Open Inventor using VolumeViz extension
 #include <fstream>
 #include <iomanip>
 
-#define TeddyImagePath	"D:/FEI-OpenInv/teddybear/"
+#define TeddyImagesPath	"D:/FEI-OpenInv/teddybear/"
 #define TeddyLSTFile	"teddybear.lst"		// Please modify the path accordingly
 
 /* Hacked implementation to create a LST file for volume rendering.
@@ -293,15 +293,21 @@ void createVolumeRender(SoGroup* head, SoVolumeData* volumeData)
  * Creates custom volume reader for stacked raster images
  * Creates OIV scene graph, and ExaminerViewer
  */
-int main(int, char **argv)
+int main(int argc, char **argv)
 {
+	// Check argument to the program, and assign first argument as
+	// lst filename. In case of no arguments assign default name.
+	SbString lstFile = TeddyLSTFile;
+	if(argc > 1)
+		lstFile = argv[1];
+
 	// Initialize OpenInventor and create the window
 	Widget mainWindow = SoXt::init(argv[0]);
 	if (!mainWindow) return 0;
 
 #if 0
 	// Create LST file from set of input images for volume rendering
-	CreateLSTFile(TeddyImagePath, "teddybear", 62);
+	CreateLSTFile(TeddyImagesPath, "teddybear", 62);
 #endif
 
 	// Initialize of VolumeViz extension
@@ -310,10 +316,10 @@ int main(int, char **argv)
 	// Cumstom VolumeReader for stacked raster images
 	SoVRRasterStackReader* stackReader = new SoVRRasterStackReader();
 	// If reader cannot fine file, then just return for now.
-	if(stackReader->setFilename(TeddyLSTFile) != 0)
+	if(stackReader->setFilename(lstFile) != 0)
 	{
 		std::cerr << "Unable to open .LST file. @ line " << __LINE__ 
-				  << " in " << __FUNCTION__ << "() function." ;
+				  << " in " << __FUNCTION__ << "() function.\n" ;
 		SoVolumeRendering::finish();
 		SoXt::finish();
 		return 0;
